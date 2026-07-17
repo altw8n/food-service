@@ -1,0 +1,47 @@
+package com.example.orderservice.domain;
+
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.math.BigDecimal;
+import java.util.LinkedHashSet;
+import java.util.Set;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Table (name = "orders")
+@Entity
+public class OrderEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column (name = "order_id", nullable = false)
+    private Long id;
+
+    @Column (name = "customer_id")
+    private Long customerId;
+
+    @Column (name = "adress")
+    private String address;
+
+    @Column (name = "totalAmount", precision = 19, scale = 2)
+    private BigDecimal totalAmount;
+
+    @Column (name = "courier_name")
+    private String courierName;
+
+    @Column (name = "courier_name")
+    private Integer etaMinutes;
+
+    @Enumerated(EnumType.STRING)
+    @Column (name = "order_status", nullable = false)
+    private OrderSatus orderStatus;
+
+    @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST)
+    private Set<OrderItemEntity> orderItemEntities = new LinkedHashSet<>();
+}
+

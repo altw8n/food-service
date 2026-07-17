@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AmplicodePersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit moduleName="delivery-service.main" name="Default">
+        <packages>
+          <package value="com.example.deliveryservice" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="payment-service.main" name="Default">
+        <packages>
+          <package value="com.example.paymentservice" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="order-service.main" name="Default">
+        <packages>
+          <package value="com.example.orderservice" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit moduleName="deliveryService.main" name="Default">
+        <packages>
+          <package value="com.example.deliveryservice" />
+        </packages>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>
