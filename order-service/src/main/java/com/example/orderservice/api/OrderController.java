@@ -1,8 +1,6 @@
 package com.example.orderservice.api;
 
-import com.example.orderservice.domain.OrderEntity;
 import com.example.orderservice.domain.OrderEntityMapper;
-import com.example.orderservice.domain.OrderItemEntity;
 import com.example.orderservice.domain.OrderProcessor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -16,13 +14,16 @@ public class OrderController {
 
     private static final Logger log = LoggerFactory.getLogger(OrderController.class);
 
-    private OrderProcessor orderProcessor;
+    private final OrderProcessor orderProcessor;
+
     private final OrderEntityMapper orderEntityMapper;
 
     @PostMapping
-    public OrderDto create(@RequestBody OrderEntity orderEntity) {
-        log.info("Создан заказ с Id {}", orderEntity.getId());
-        var saved = orderProcessor.create(orderEntity);
+    public OrderDto create(
+            @RequestBody CreateOrderRequestDto request
+    ) {
+        log.info("Создан заказ: request = {}", request);
+        var saved = orderProcessor.create(request);
         return orderEntityMapper.toOrderDto(saved);
     }
 

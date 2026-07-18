@@ -34,7 +34,7 @@ public class OrderEntity {
     @Column (name = "courier_name")
     private String courierName;
 
-    @Column (name = "courier_name")
+    @Column (name = "eta_minutes")
     private Integer etaMinutes;
 
     @Enumerated(EnumType.STRING)
@@ -42,6 +42,6 @@ public class OrderEntity {
     private OrderSatus orderStatus;
 
     @OneToMany(mappedBy = "order", cascade = CascadeType.PERSIST)
-    private Set<OrderItemEntity> orderItemEntities = new LinkedHashSet<>();
+    private Set<OrderItemEntity> items = new LinkedHashSet<>();
 }
 

@@ -31,6 +31,9 @@ public class OrderItemEntity {
     @Column(name = "quantity")
     private Integer quantity;
 
+    @Column(name = "item_name")
+    private String name;
+
     @Column(name = "price_at_purchase")
     private BigDecimal priceAtPurchase;
 

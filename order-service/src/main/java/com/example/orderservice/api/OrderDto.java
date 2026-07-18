@@ -1,6 +1,5 @@
 package com.example.orderservice.api;
 
-import com.example.orderservice.domain.OrderItemEntity;
 import com.example.orderservice.domain.OrderSatus;
 
 import java.math.BigDecimal;
@@ -14,7 +13,5 @@ public record OrderDto(
         String courierName,
         Integer etaMinutes,
         OrderSatus orderStatus,
-        Set<OrderItemEntity> orderItemEntities
-) {
-
-}
+        Set<OrderItemDto> items
+) {}

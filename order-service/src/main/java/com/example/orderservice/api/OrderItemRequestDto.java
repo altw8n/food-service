@@ -1,12 +1,8 @@
 package com.example.orderservice.api;
 
-import java.math.BigDecimal;
-
-public record OrderItemDto(
-        Long id,
+public record OrderItemRequestDto(
         Long itemId,
         Integer quantity,
-        BigDecimal priceAtPurchase,
         String name
 ) {
 }
