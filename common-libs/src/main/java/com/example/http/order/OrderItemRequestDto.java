@@ -1,4 +1,4 @@
-package com.example.orderservice.api;
+package com.example.http.order;
 
 public record OrderItemRequestDto(
         Long itemId,

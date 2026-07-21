@@ -1,4 +1,4 @@
-package com.example.orderservice.api;
+package com.example.http.order;
 
 import java.util.Set;
 

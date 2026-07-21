@@ -1,4 +1,4 @@
-package com.example.paymentservice.domain;
+package com.example.paymentservice.domain.db;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

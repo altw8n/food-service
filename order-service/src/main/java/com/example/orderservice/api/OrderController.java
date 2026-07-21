@@ -1,6 +1,8 @@
 package com.example.orderservice.api;
 
-import com.example.orderservice.domain.OrderEntityMapper;
+import com.example.http.order.CreateOrderRequestDto;
+import com.example.http.order.OrderDto;
+import com.example.orderservice.domain.db.OrderEntityMapper;
 import com.example.orderservice.domain.OrderProcessor;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

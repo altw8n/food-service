@@ -1,6 +1,7 @@
-package com.example.paymentservice.api;
+package com.example.paymentservice.domain.db;
 
-import com.example.paymentservice.domain.PaymentEntity;
+import com.example.http.payment.CreatePaymentRequestDto;
+import com.example.http.payment.CreatePaymentResponseDto;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingConstants;

@@ -1,5 +1,6 @@
-package com.example.orderservice.domain;
+package com.example.orderservice.domain.db;
 
+import com.example.http.order.OrderSatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

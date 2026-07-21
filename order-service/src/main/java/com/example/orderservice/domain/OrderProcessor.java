@@ -1,6 +1,11 @@
 package com.example.orderservice.domain;
 
-import com.example.orderservice.api.CreateOrderRequestDto;
+import com.example.http.order.CreateOrderRequestDto;
+import com.example.http.order.OrderSatus;
+import com.example.orderservice.domain.db.OrderEntity;
+import com.example.orderservice.domain.db.OrderEntityMapper;
+import com.example.orderservice.domain.db.OrderItemEntity;
+import com.example.orderservice.domain.db.OrderJpaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -43,4 +48,7 @@ public class OrderProcessor {
         entity.setTotalAmount(totalPrice);
     }
 
+//    public OrderEntity processPayment(OrderPaymentRequest request){
+//
+//    }
 }

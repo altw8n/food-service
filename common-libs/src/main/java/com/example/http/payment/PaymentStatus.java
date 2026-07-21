@@ -1,4 +1,4 @@
-package com.example.paymentservice.domain;
+package com.example.http.payment;
 
 public enum PaymentStatus {
     PAYMENT_SUCCESS,

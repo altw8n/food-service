@@ -1,5 +1,7 @@
-package com.example.paymentservice.domain;
+package com.example.paymentservice.domain.db;
 
+import com.example.http.payment.PaymentMethod;
+import com.example.http.payment.PaymentStatus;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

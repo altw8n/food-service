@@ -1,4 +1,4 @@
-package com.example.orderservice.domain;
+package com.example.orderservice.domain.db;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

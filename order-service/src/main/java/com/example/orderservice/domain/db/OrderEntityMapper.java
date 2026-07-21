@@ -1,8 +1,8 @@
-package com.example.orderservice.domain;
+package com.example.orderservice.domain.db;
 
-import com.example.orderservice.api.CreateOrderRequestDto;
-import com.example.orderservice.api.OrderDto;
-import com.example.orderservice.api.OrderItemDto;
+import com.example.http.order.CreateOrderRequestDto;
+import com.example.http.order.OrderDto;
+import com.example.http.order.OrderItemDto;
 import org.mapstruct.AfterMapping;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingConstants;

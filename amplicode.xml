@@ -2,24 +2,25 @@
 <project version="4">
   <component name="AmplicodePersistenceUnitSettings">
     <persistence-units>
-      <persistence-unit moduleName="delivery-service.main" name="Default">
+      <persistence-unit moduleName="deliveryService.main" name="Default">
         <packages>
           <package value="com.example.deliveryservice" />
         </packages>
       </persistence-unit>
-      <persistence-unit moduleName="payment-service.main" name="Default">
+      <persistence-unit moduleName="deliveryService.delivery-service.main" name="Default">
         <packages>
-          <package value="com.example.paymentservice" />
+          <package value="com.example.deliveryservice" />
         </packages>
       </persistence-unit>
-      <persistence-unit moduleName="order-service.main" name="Default">
+      <persistence-unit moduleName="deliveryService.common-libs.main" name="Default" />
+      <persistence-unit moduleName="deliveryService.order-service.main" name="Default">
         <packages>
           <package value="com.example.orderservice" />
         </packages>
       </persistence-unit>
-      <persistence-unit moduleName="deliveryService.main" name="Default">
+      <persistence-unit moduleName="deliveryService.payment-service.main" name="Default">
         <packages>
-          <package value="com.example.deliveryservice" />
+          <package value="com.example.paymentservice" />
         </packages>
       </persistence-unit>
     </persistence-units>

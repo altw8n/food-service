@@ -1,4 +1,4 @@
-package com.example.orderservice.domain;
+package com.example.http.order;
 
 public enum OrderSatus {
     PENDING_PAYMENT,

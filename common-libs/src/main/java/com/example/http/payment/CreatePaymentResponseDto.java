@@ -1,7 +1,5 @@
-package com.example.paymentservice.api;
+package com.example.http.payment;
 
-import com.example.paymentservice.domain.PaymentMethod;
-import com.example.paymentservice.domain.PaymentStatus;
 
 import java.math.BigDecimal;
 

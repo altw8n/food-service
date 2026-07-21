@@ -1,6 +1,4 @@
-package com.example.orderservice.api;
-
-import com.example.orderservice.domain.OrderSatus;
+package com.example.http.order;
 
 import java.math.BigDecimal;
 import java.util.Set;
