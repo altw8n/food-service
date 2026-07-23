@@ -21,12 +21,20 @@ public class OrderController {
     private final OrderEntityMapper orderEntityMapper;
 
     @PostMapping
-    public OrderDto create(
-            @RequestBody CreateOrderRequestDto request
+    public OrderDto createOrder(@RequestBody CreateOrderRequestDto request) {
+        log.info("Создание заказа: request = {}", request);
+        var entity = orderProcessor.create(request);
+        return orderEntityMapper.toOrderDto(entity);
+    }
+
+    @PostMapping("/{id}/pay")
+    public OrderDto payOrder(
+            @PathVariable Long id,
+            @RequestBody OrderPaymentRequest request
     ) {
-        log.info("Создан заказ: request = {}", request);
-        var saved = orderProcessor.create(request);
-        return orderEntityMapper.toOrderDto(saved);
+        log.info("Оплачивается заказ с id = {}, request = {}", id, request);
+        var entity = orderProcessor.processPayment(id, request);
+        return orderEntityMapper.toOrderDto(entity);
     }
 
     @GetMapping("/{id}")

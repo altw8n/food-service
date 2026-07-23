@@ -4,6 +4,6 @@ public enum OrderSatus {
     PENDING_PAYMENT,
     PAID,
     PAYMENT_FAILED,
-    PENDING_DELIVERY,
+    DELIVERY_ASSIGNED,
     DELIVERED;
 }
